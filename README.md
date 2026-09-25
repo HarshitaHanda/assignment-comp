@@ -2,7 +2,7 @@
 
 A reproducible evidence-first research pipeline and interactive case study for the Composio AI Product Ops Intern take-home assignment.
 
-**Live case study:** deployed with Vercel  
+**Live case study:** https://assignment-comp.vercel.app/  
 **Repository:** https://github.com/HarshitaHanda/assignment-comp
 
 ## Final research snapshot
