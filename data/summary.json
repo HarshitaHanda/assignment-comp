@@ -1,0 +1,179 @@
+{
+  "researched": 100,
+  "total": 100,
+  "needs_human_review": 35,
+  "composio_matches": 60,
+  "average_confidence": 0.74,
+  "auth_methods": [
+    [
+      "API key",
+      48
+    ],
+    [
+      "OAuth2",
+      43
+    ],
+    [
+      "Bearer token",
+      43
+    ],
+    [
+      "Basic",
+      17
+    ],
+    [
+      "JWT",
+      16
+    ],
+    [
+      "Client Credentials",
+      1
+    ],
+    [
+      "OAuth",
+      1
+    ],
+    [
+      "Access Token",
+      1
+    ],
+    [
+      "Bot token",
+      1
+    ]
+  ],
+  "access_models": [
+    [
+      "self-serve",
+      42
+    ],
+    [
+      "unknown",
+      24
+    ],
+    [
+      "self-serve-trial",
+      19
+    ],
+    [
+      "self-serve-free",
+      12
+    ],
+    [
+      "self-serve-paid",
+      3
+    ]
+  ],
+  "buildability": [
+    [
+      "yes",
+      64
+    ],
+    [
+      "partial",
+      20
+    ],
+    [
+      "unknown",
+      16
+    ]
+  ],
+  "classification_methods": [
+    [
+      "deterministic-rules",
+      77
+    ],
+    [
+      "rules+groq-fallback",
+      12
+    ],
+    [
+      "retrieval-failed",
+      8
+    ],
+    [
+      "rules+bazaar-fallback",
+      2
+    ],
+    [
+      "rules+gemini-fallback",
+      1
+    ]
+  ],
+  "top_blockers": [
+    [
+      "A programmable surface was found, but auth or developer-access evidence is incomplete.",
+      20
+    ],
+    [
+      "No sufficiently explicit public API surface was found in the retrieved official pages.",
+      8
+    ],
+    [
+      "Official documentation could not be retrieved automatically.",
+      8
+    ]
+  ],
+  "categories": {
+    "CRM and Sales": {
+      "total": 10,
+      "buildable": 8,
+      "gated": 0,
+      "needs_review": 2
+    },
+    "Support and Helpdesk": {
+      "total": 10,
+      "buildable": 7,
+      "gated": 0,
+      "needs_review": 3
+    },
+    "Communications and Messaging": {
+      "total": 10,
+      "buildable": 5,
+      "gated": 0,
+      "needs_review": 4
+    },
+    "Marketing, Ads, Email and Social": {
+      "total": 10,
+      "buildable": 4,
+      "gated": 0,
+      "needs_review": 6
+    },
+    "Ecommerce": {
+      "total": 10,
+      "buildable": 6,
+      "gated": 0,
+      "needs_review": 4
+    },
+    "Data, SEO and Scraping": {
+      "total": 10,
+      "buildable": 9,
+      "gated": 0,
+      "needs_review": 1
+    },
+    "Developer, Infra and Data platforms": {
+      "total": 10,
+      "buildable": 9,
+      "gated": 0,
+      "needs_review": 1
+    },
+    "Productivity and Project Management": {
+      "total": 10,
+      "buildable": 6,
+      "gated": 0,
+      "needs_review": 4
+    },
+    "Finance and Fintech": {
+      "total": 10,
+      "buildable": 4,
+      "gated": 0,
+      "needs_review": 6
+    },
+    "AI, Research and Media-native": {
+      "total": 10,
+      "buildable": 6,
+      "gated": 0,
+      "needs_review": 4
+    }
+  }
+}

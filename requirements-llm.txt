@@ -1,0 +1,6 @@
+-r requirements.txt
+groq
+google-genai
+mistralai>=2.0.0
+anthropic
+openai

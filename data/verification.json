@@ -1,0 +1,148 @@
+{
+  "generated_at": "2026-09-25T05:09:03.813450+00:00",
+  "sample_size": 2,
+  "claims_checked": 12,
+  "claims_supported": 8,
+  "claims_inconclusive": 2,
+  "claims_contradicted": 2,
+  "browser_evidence_coverage": 0.6667,
+  "browser_agreement_rate": 0.8,
+  "human_validated_accuracy": null,
+  "corrections": [
+    {
+      "app_id": 1,
+      "app_name": "Salesforce",
+      "field": "access_model",
+      "before": "self-serve-free",
+      "after": "self-serve",
+      "reason": "Browser-rendered official evidence produced a conflicting classification; flagged for human review.",
+      "evidence": [
+        {
+          "url": "https://developer.salesforce.com/",
+          "supports": "Documented programmable surface: REST; Developer access evidence: self-serve credential/app provisioning"
+        },
+        {
+          "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-what-is-rest-api.html",
+          "supports": "Documented programmable surface: REST; Developer access evidence: self-serve"
+        },
+        {
+          "url": "https://docs.salesforce.com/",
+          "supports": "Official-page reference to MCP / Model Context Protocol"
+        }
+      ]
+    },
+    {
+      "app_id": 1,
+      "app_name": "Salesforce",
+      "field": "main_blocker",
+      "before": null,
+      "after": "API surface found, but the authentication path was not explicit in retrieved official pages.",
+      "reason": "Browser-rendered official evidence produced a conflicting classification; flagged for human review.",
+      "evidence": [
+        {
+          "url": "https://developer.salesforce.com/",
+          "supports": "Documented programmable surface: REST; Developer access evidence: self-serve credential/app provisioning"
+        },
+        {
+          "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-what-is-rest-api.html",
+          "supports": "Documented programmable surface: REST; Developer access evidence: self-serve"
+        },
+        {
+          "url": "https://docs.salesforce.com/",
+          "supports": "Official-page reference to MCP / Model Context Protocol"
+        }
+      ]
+    }
+  ],
+  "agent_checks": [
+    {
+      "app_id": 1,
+      "app_name": "Salesforce",
+      "fields_checked": [
+        "auth_methods",
+        "access_model",
+        "api_surface",
+        "mcp_status",
+        "buildability",
+        "main_blocker"
+      ],
+      "statuses": {
+        "auth_methods": "inconclusive",
+        "access_model": "contradiction",
+        "api_surface": "support",
+        "mcp_status": "support",
+        "buildability": "inconclusive",
+        "main_blocker": "contradiction"
+      },
+      "contradictions": {
+        "access_model": "self-serve",
+        "main_blocker": "API surface found, but the authentication path was not explicit in retrieved official pages."
+      },
+      "inconclusive": {
+        "auth_methods": {
+          "first_pass": [
+            "OAuth2"
+          ],
+          "browser_pass": []
+        },
+        "buildability": {
+          "first_pass": "yes",
+          "browser_pass": "partial"
+        }
+      },
+      "browser_confidence": 0.73,
+      "evidence": [
+        {
+          "url": "https://developer.salesforce.com/",
+          "supports": "Documented programmable surface: REST; Developer access evidence: self-serve credential/app provisioning"
+        },
+        {
+          "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-what-is-rest-api.html",
+          "supports": "Documented programmable surface: REST; Developer access evidence: self-serve"
+        },
+        {
+          "url": "https://docs.salesforce.com/",
+          "supports": "Official-page reference to MCP / Model Context Protocol"
+        }
+      ]
+    },
+    {
+      "app_id": 11,
+      "app_name": "Zendesk",
+      "fields_checked": [
+        "auth_methods",
+        "access_model",
+        "api_surface",
+        "mcp_status",
+        "buildability",
+        "main_blocker"
+      ],
+      "statuses": {
+        "auth_methods": "support",
+        "access_model": "support",
+        "api_surface": "support",
+        "mcp_status": "support",
+        "buildability": "support",
+        "main_blocker": "support"
+      },
+      "contradictions": {},
+      "inconclusive": {},
+      "browser_confidence": 0.88,
+      "evidence": [
+        {
+          "url": "https://developer.zendesk.com/api-reference/webhooks/webhooks-api/webhooks/",
+          "supports": "Authentication evidence: API key; Authentication evidence: Basic; Authentication evidence: Bearer token; Documented programmable surface: REST; Documented programmable surface: Webhooks; Developer access evidence: self-serve; Developer access evidence: self-serve credential/app provisioning"
+        },
+        {
+          "url": "https://developer.zendesk.com/documentation/",
+          "supports": "Documented programmable surface: Webhooks; Documented programmable surface: Public API; Developer access evidence: self-serve-trial; Developer access evidence: self-serve-free"
+        },
+        {
+          "url": "https://www.zendesk.com/help-center-closed/?utm_source=helpcenter-closed&utm_medium=poweredbyzendesk&utm_campaign=text&utm_content=developers.zendesk.com",
+          "supports": "Developer access evidence: self-serve-trial"
+        }
+      ]
+    }
+  ],
+  "human_checks": []
+}

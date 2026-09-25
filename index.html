@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="Composio AI Product Ops take-home: evidence-first research across 100 requested apps, with developer-access classification, Composio coverage, browser verification and traceable official-source evidence."
+  />
+
+  <title>
+    100 Apps → Agent Tools | Product Ops Case Study
+  </title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="/styles.css"
+  />
+</head>
+
+
+<body>
+
+  <div class="noise"></div>
+
+
+  <!-- =====================================================
+       TOP NAV
+  ====================================================== -->
+
+  <header class="topbar">
+
+    <a
+      class="brand"
+      href="#top"
+    >
+      <span class="brand-mark">
+        C
+      </span>
+
+      <span>
+        Product Ops Research
+      </span>
+    </a>
+
+
+    <nav>
+      <a href="#findings">
+        Findings
+      </a>
+
+      <a href="#agent">
+        System
+      </a>
+
+      <a href="#verification">
+        Verification
+      </a>
+
+      <a href="#matrix">
+        100 apps
+      </a>
+    </nav>
+
+
+    <a
+      class="repo-link"
+      href="https://github.com/HarshitaHanda/assignment-comp"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Source ↗
+    </a>
+
+  </header>
+
+
+  <main id="top">
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero">
+
+      <div class="eyebrow">
+        AI Product Ops · Take-home case study
+      </div>
+
+
+      <h1>
+        100 requested apps.
+        <span>
+          Which ones can become agent tools today?
+        </span>
+      </h1>
+
+
+      <p class="hero-copy">
+        I built an evidence-first research pipeline that starts
+        from official documentation, classifies clear cases with
+        deterministic rules, escalates ambiguity instead of guessing,
+        checks Composio coverage, and spot-checks the results through
+        a separate browser-rendered verification pass.
+      </p>
+
+
+      <div class="hero-actions">
+
+        <a
+          class="button primary"
+          href="#findings"
+        >
+          See the findings
+        </a>
+
+        <a
+          class="button secondary"
+          href="#agent"
+        >
+          Inspect the system
+        </a>
+
+      </div>
+
+
+      <div
+        class="trust-strip"
+        aria-label="Research principles"
+      >
+
+        <span>
+          Official sources first
+        </span>
+
+        <span>
+          Deterministic by default
+        </span>
+
+        <span>
+          LLM fallback only for ambiguity
+        </span>
+
+        <span>
+          Uncertainty stays visible
+        </span>
+
+      </div>
+
+
+      <div class="progress-shell">
+
+        <div class="progress-copy">
+
+          <span id="progressText">
+            Loading research…
+          </span>
+
+          <span id="progressPct">
+            —
+          </span>
+
+        </div>
+
+
+        <div class="progress-track">
+
+          <div
+            id="progressBar"
+            class="progress-bar"
+          ></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FINDINGS
+    ====================================================== -->
+
+    <section
+      id="findings"
+      class="section"
+    >
+
+      <div class="section-kicker">
+        01 · Findings
+      </div>
+
+
+      <div class="section-head">
+
+        <h2>
+          The answer before the spreadsheet.
+        </h2>
+
+        <p>
+          Every number below is generated from the current research
+          dataset. Nothing is hard-coded to make the case study
+          look complete.
+        </p>
+
+      </div>
+
+
+
+      <!-- TOP METRICS -->
+
+      <div class="metrics">
+
+        <article class="metric">
+
+          <span class="metric-label">
+            Researched
+          </span>
+
+          <strong id="metricResearched">
+            —
+          </strong>
+
+          <small>
+            of 100 requested apps
+          </small>
+
+        </article>
+
+
+        <article class="metric">
+
+          <span class="metric-label">
+            Buildable now
+          </span>
+
+          <strong id="metricBuildable">
+            —
+          </strong>
+
+          <small>
+            documented API + auth + access path
+          </small>
+
+        </article>
+
+
+        <article class="metric warning">
+
+          <span class="metric-label">
+            Needs review
+          </span>
+
+          <strong id="metricNeedsReview">
+            —
+          </strong>
+
+          <small>
+            ambiguous or incomplete evidence
+          </small>
+
+        </article>
+
+
+        <article class="metric accent">
+
+          <span class="metric-label">
+            Composio match
+          </span>
+
+          <strong id="metricComposio">
+            —
+          </strong>
+
+          <small>
+            toolkit found in live catalog
+          </small>
+
+        </article>
+
+      </div>
+
+
+
+      <!-- PATTERN CHARTS -->
+
+      <div class="split-grid">
+
+        <article class="panel">
+
+          <div class="panel-title">
+            Auth patterns
+          </div>
+
+          <p class="panel-subtitle">
+            Authentication methods explicitly found in the
+            retrieved official documentation.
+          </p>
+
+          <div
+            id="authBars"
+            class="bar-list empty-state"
+          >
+            Run the research agent to populate this chart.
+          </div>
+
+        </article>
+
+
+        <article class="panel">
+
+          <div class="panel-title">
+            Access patterns
+          </div>
+
+          <p class="panel-subtitle">
+            Access is classified only when official evidence shows
+            how a developer can provision credentials or obtain API
+            access. Unresolved cases stay unknown rather than being guessed.
+          </p>
+
+          <div
+            id="accessBars"
+            class="bar-list empty-state"
+          >
+            Run the research agent to populate this chart.
+          </div>
+
+        </article>
+
+      </div>
+
+
+
+      <!-- INSIGHTS -->
+
+      <article class="panel wide-panel">
+
+        <div class="panel-topline">
+
+          <div>
+
+            <div class="panel-title">
+              What the pattern says
+            </div>
+
+            <p class="panel-subtitle">
+              The useful part is not 100 rows.
+              It is what repeats across them.
+            </p>
+
+          </div>
+
+
+          <span
+            class="badge"
+            id="insightBadge"
+          >
+            Awaiting data
+          </span>
+
+        </div>
+
+
+        <div
+          id="patternCards"
+          class="pattern-grid"
+        >
+
+          <div class="pattern-card muted">
+
+            <span>
+              01
+            </span>
+
+            <p>
+              Patterns appear here after enough apps have
+              been researched to make the counts meaningful.
+            </p>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- FUNNEL -->
+
+      <article class="panel funnel-panel">
+
+        <div class="panel-topline">
+
+          <div>
+
+            <div class="panel-title">
+              Decision funnel
+            </div>
+
+            <p class="panel-subtitle">
+              The system separates well-supported findings from
+              cases that still deserve human attention.
+            </p>
+
+          </div>
+
+
+          <span
+            class="badge"
+            id="confidenceBadge"
+          >
+            Confidence —
+          </span>
+
+        </div>
+
+
+        <div
+          class="funnel"
+          id="funnel"
+        >
+
+          <div class="funnel-step">
+
+            <span>
+              Clear evidence
+            </span>
+
+            <strong id="funnelClear">
+              —
+            </strong>
+
+            <small>
+              auto-classified
+            </small>
+
+          </div>
+
+
+          <div class="funnel-arrow">
+            →
+          </div>
+
+
+          <div class="funnel-step review">
+
+            <span>
+              Ambiguous
+            </span>
+
+            <strong id="funnelReview">
+              —
+            </strong>
+
+            <small>
+              flagged for review
+            </small>
+
+          </div>
+
+
+          <div class="funnel-arrow">
+            →
+          </div>
+
+
+          <div class="funnel-step">
+
+            <span>
+              Verified sample
+            </span>
+
+            <strong id="funnelVerified">
+              —
+            </strong>
+
+            <small>
+              browser spot-check
+            </small>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SYSTEM
+    ====================================================== -->
+
+    <section
+      id="agent"
+      class="section dark-section"
+    >
+
+      <div class="section-kicker">
+        02 · The system
+      </div>
+
+
+      <div class="section-head">
+
+        <h2>
+          Evidence first. Intelligence where it actually helps.
+        </h2>
+
+        <p>
+          The default run does not require an LLM.
+          Clear cases are classified from explicit documentation;
+          uncertain cases remain visible and can optionally be escalated.
+        </p>
+
+      </div>
+
+
+
+      <div class="pipeline four">
+
+
+        <!-- DISCOVER -->
+
+        <article class="stage">
+
+          <div class="stage-num">
+            01
+          </div>
+
+          <h3>
+            Discover
+          </h3>
+
+          <p>
+            Start from the official URL in the research set and
+            retrieve likely API, authentication, developer,
+            webhook and MCP documentation.
+          </p>
+
+          <div class="code-chip">
+            requests + BeautifulSoup
+          </div>
+
+        </article>
+
+
+        <div class="connector">
+          →
+        </div>
+
+
+
+        <!-- CLASSIFY -->
+
+        <article class="stage">
+
+          <div class="stage-num">
+            02
+          </div>
+
+          <h3>
+            Classify
+          </h3>
+
+          <p>
+            Extract explicit signals for OAuth, API keys,
+            REST, GraphQL, webhooks, developer-access flows,
+            access gates and MCP.
+          </p>
+
+          <div class="code-chip">
+            deterministic rules
+          </div>
+
+        </article>
+
+
+        <div class="connector">
+          →
+        </div>
+
+
+
+        <!-- ESCALATE -->
+
+        <article class="stage">
+
+          <div class="stage-num">
+            03
+          </div>
+
+          <h3>
+            Escalate
+          </h3>
+
+          <p>
+            Ambiguous rows can be escalated through Bazaar,
+            then Groq, then Gemini if the finding remains unresolved.
+            Each provider receives only compact excerpts from the
+            retrieved official sources.
+          </p>
+
+          <div class="code-chip">
+            Bazaar → Groq → Gemini · ambiguous rows only
+          </div>
+
+        </article>
+
+
+        <div class="connector">
+          →
+        </div>
+
+
+
+        <!-- VERIFY -->
+
+        <article class="stage">
+
+          <div class="stage-num">
+            04
+          </div>
+
+          <h3>
+            Verify
+          </h3>
+
+          <p>
+            Playwright re-renders a sample of evidence pages and
+            independently reclassifies them. Disagreements remain
+            visible instead of being silently overwritten.
+          </p>
+
+          <div class="code-chip">
+            Chromium browser spot-check
+          </div>
+
+        </article>
+
+      </div>
+
+
+
+      <!-- SYSTEM DETAILS -->
+
+      <div class="system-grid">
+
+        <article class="system-card">
+
+          <span class="system-label">
+            Composio SDK
+          </span>
+
+          <strong>
+            Used for product-aware enrichment, not decoration.
+          </strong>
+
+          <p>
+            The live toolkit catalog is queried to determine whether
+            each requested app already maps to a Composio toolkit.
+          </p>
+
+          <div class="code-chip">
+            composio.toolkits.list()
+          </div>
+
+        </article>
+
+
+        <article class="system-card">
+
+          <span class="system-label">
+            Human boundary
+          </span>
+
+          <strong>
+            Some integration questions are operational,
+            not textual.
+          </strong>
+
+          <p>
+            Post-login API access, enterprise entitlements,
+            partner approval and ambiguous documentation are
+            explicitly surfaced for manual review.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         VERIFICATION
+    ====================================================== -->
+
+    <section
+      id="verification"
+      class="section"
+    >
+
+      <div class="section-kicker">
+        03 · Verification
+      </div>
+
+
+      <div class="section-head">
+
+        <h2>
+          Trust is measured, not implied.
+        </h2>
+
+        <p>
+          The browser verification pass is a spot-check of the
+          research pipeline, not a statistical accuracy estimate.
+          It measures field-level agreement with the first pass and
+          retains disagreements for inspection.
+        </p>
+
+      </div>
+
+
+
+      <div class="verification-grid">
+
+        <article class="verify-card">
+
+          <span>
+            Sample checked
+          </span>
+
+          <strong id="verifySample">
+            —
+          </strong>
+
+          <small>
+            browser-rendered apps
+          </small>
+
+        </article>
+
+
+        <article class="verify-card">
+
+          <span>
+            Browser agreement
+          </span>
+
+          <strong id="verifyAgreement">
+            —
+          </strong>
+
+          <small>
+            field-level agreement in sample
+          </small>
+
+        </article>
+
+
+        <article class="verify-card accent-soft">
+
+          <span>
+            Human validated
+          </span>
+
+          <strong id="verifyHuman">
+            —
+          </strong>
+
+          <small>
+            shown only after manual checks
+          </small>
+
+        </article>
+
+
+        <article class="verify-card">
+
+          <span>
+            Corrections logged
+          </span>
+
+          <strong id="verifyCorrections">
+            —
+          </strong>
+
+          <small>
+            disagreements retained
+          </small>
+
+        </article>
+
+      </div>
+
+
+
+      <div class="panel corrections-panel">
+
+        <div class="panel-title">
+          Hits, misses, and corrections
+        </div>
+
+        <p class="panel-subtitle">
+          A disagreement is treated as a review signal rather
+          than silently replacing the first-pass result.
+        </p>
+
+        <div
+          id="correctionsList"
+          class="correction-list empty-state"
+        >
+          Verification output will appear here after the browser pass runs.
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         100 APP MATRIX
+    ====================================================== -->
+
+    <section
+      id="matrix"
+      class="section matrix-section"
+    >
+
+      <div class="section-kicker">
+        04 · 100-app matrix
+      </div>
+
+
+      <div class="section-head">
+
+        <h2>
+          Every verdict should be traceable.
+        </h2>
+
+        <p>
+          Filter the set, inspect confidence and classification
+          method, then open the exact official evidence retained
+          for each row.
+        </p>
+
+      </div>
+
+
+
+      <!-- FILTERS -->
+
+      <div class="toolbar">
+
+        <label class="search-box">
+
+          <span>
+            /
+          </span>
+
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Search app, auth, blocker…"
+          />
+
+        </label>
+
+
+        <select id="categoryFilter">
+
+          <option value="">
+            All categories
+          </option>
+
+        </select>
+
+
+        <select id="buildFilter">
+
+          <option value="">
+            Any buildability
+          </option>
+
+          <option value="yes">
+            Buildable
+          </option>
+
+          <option value="partial">
+            Partial
+          </option>
+
+          <option value="no">
+            Not buildable
+          </option>
+
+          <option value="unknown">
+            Unknown
+          </option>
+
+        </select>
+
+
+        <select id="reviewFilter">
+
+          <option value="">
+            Any confidence
+          </option>
+
+          <option value="review">
+            Needs review
+          </option>
+
+          <option value="clear">
+            Clear evidence
+          </option>
+
+        </select>
+
+
+        <span
+          id="rowCount"
+          class="row-count"
+        >
+          100 apps
+        </span>
+
+      </div>
+
+
+
+      <!-- TABLE -->
+
+      <div class="table-wrap">
+
+        <table>
+
+          <thead>
+
+            <tr>
+
+              <th>
+                App
+              </th>
+
+              <th>
+                Auth
+              </th>
+
+              <th>
+                Access
+              </th>
+
+              <th>
+                API / MCP
+              </th>
+
+              <th>
+                Verdict
+              </th>
+
+              <th>
+                Confidence
+              </th>
+
+              <th>
+                Method
+              </th>
+
+              <th>
+                Blocker
+              </th>
+
+              <th>
+                Evidence
+              </th>
+
+            </tr>
+
+          </thead>
+
+
+          <tbody id="resultsBody">
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer>
+
+    <div>
+
+      <strong>
+        Harshita Handa
+      </strong>
+
+      <span>
+        AI Product Ops · Composio take-home
+      </span>
+
+    </div>
+
+
+    <p>
+      Built as a reproducible research system,
+      not a manually filled spreadsheet.
+    </p>
+
+  </footer>
+
+
+
+  <script
+    src="/app.js?v=4"
+    defer
+  ></script>
+
+</body>
+
+</html>
