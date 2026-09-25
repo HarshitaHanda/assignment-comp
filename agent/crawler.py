@@ -38,7 +38,7 @@ COMMON_TWO_LEVEL_SUFFIXES = {
 
 USER_AGENT = (
     "Mozilla/5.0 (compatible; ComposioProductOpsResearch/1.0; "
-    "+https://github.com/HarshitaHanda/comp-prod-assignment)"
+    "+https://github.com/HarshitaHanda/assignment-comp)"
 )
 
 
